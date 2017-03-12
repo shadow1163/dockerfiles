@@ -4,9 +4,11 @@ MAINTAINER shadow1163 (674602286@qq.com)
 
 RUN groupadd -r mysql && useradd -r -g mysql mysql
 
+ENV MYSQL_ROOT_PASSWORD welcome
+
 COPY sources.list /etc/apt/sources.list
 
-RUN apt-get update && apt-get install -y --no-install-recommends pwgen openssl wget perl apt-utils
+RUN apt-get update && apt-get install -y --no-install-recommends pwgen openssl wget perl apt-utils gosu
 
 RUN mkdir /docker-entrypoint-initdb.d
 
@@ -28,7 +30,5 @@ COPY docker-entrypoint.sh /usr/local/bin/
 RUN ln -s /usr/local/bin/docker-entrypoint.sh /entrypoint.sh && chmod 777 /entrypoint.sh # backwards compat
 
 ENTRYPOINT ["docker-entrypoint.sh"]
-
 EXPOSE 3306
-
 CMD ["mysqld"]
