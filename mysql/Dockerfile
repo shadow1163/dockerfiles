@@ -8,6 +8,7 @@ ENV MYSQL_ROOT_PASSWORD welcome
 
 COPY sources.list /etc/apt/sources.list
 
+#RUN apt-get update && apt-get install -y --no-install-recommends pwgen openssl wget perl apt-utils gosu php7.0 phpmyadmin apache2
 RUN apt-get update && apt-get install -y --no-install-recommends pwgen openssl wget perl apt-utils gosu
 
 RUN mkdir /docker-entrypoint-initdb.d
