@@ -8,14 +8,13 @@ ENV MYSQL_ROOT_PASSWORD welcome
 
 COPY sources.list /etc/apt/sources.list
 
-#RUN apt-get update && apt-get install -y --no-install-recommends pwgen openssl wget perl apt-utils gosu php7.0 phpmyadmin apache2
 RUN apt-get update && apt-get install -y --no-install-recommends pwgen openssl wget perl apt-utils gosu
 
 RUN mkdir /docker-entrypoint-initdb.d
 
 RUN {\
-        echo mysql-server-5.5 mysql-server/root_password password 'password'; \
-        echo mysql-server-5.5 mysql-server/root_password_again  password 'password'; \
+        echo mysql-server-5.5 mysql-server/root_password password 'welcome'; \
+        echo mysql-server-5.5 mysql-server/root_password_again  password 'welcome'; \
         echo mysql-server-5.5 mysql-server/start_on_boot boolean true; \
     } | debconf-set-selections \
  && apt-get install -y mysql-server && rm -rf /var/lib/mysql && mkdir -p /var/lib/mysql /var/run/mysqld && chown -R mysql:mysql /var/lib/mysql /var/run/mysqld && chmod 777 /var/run/mysqld
