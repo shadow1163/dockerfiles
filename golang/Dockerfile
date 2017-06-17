@@ -8,5 +8,6 @@ RUN mkdir /go
 
 ENV GOPATH=/go
 
-RUN apt-get update && apt-get install -y golang git vim portaudio19-dev
+RUN apt-get update && apt-get install -y golang git vim portaudio19-dev mesa-common-dev xorg-dev libgl-dev
 
+RUN go get github.com/fogleman/nes

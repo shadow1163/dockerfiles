@@ -12,6 +12,6 @@ RUN git clone https://github.com/top-think/framework /opt/tp5/thinkphp
 
 COPY 000-default.conf /etc/apache2/sites-available/
 
-CMD service apache2 restart
+CMD ["service", "apache2 restart"]
 
 
