@@ -13,6 +13,13 @@ $metadata['https://saml2sp.example.org'] = array(
 	'SingleLogoutService' => 'https://saml2sp.example.org/simplesaml/module.php/saml/sp/saml2-logout.php/default-sp',
 );
 
+$metadata['Dropbox'] = array (
+'AssertionConsumerService' => 'https://www.dropbox.com/saml_login',
+'simplesaml.attributes' => true,
+'simplesaml.nameidattribute' => 'mail',
+'NameIDFormat' => 'urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress',
+);
+
 /*
  * This example shows an example config that works with G Suite (Google Apps) for education.
  * What is important is that you have an attribute in your IdP that maps to the local part of the email address
