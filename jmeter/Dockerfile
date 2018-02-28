@@ -2,6 +2,8 @@ FROM ubuntu:16.04
 
 MAINTAINER shadow1163 (674602286@qq.com)
 
-RUN apt-get update && apt-get install -y libpam-radius-auth libpam0g-dev gcc openssh-server
+RUN apt-get update && apt-get install -y curl openjdk-9-jdk openjfx --fix-missing
 
-CMD ["sshd", "-D"]
+RUN curl http://mirror.bit.edu.cn/apache//jmeter/binaries/apache-jmeter-4.0.tgz -o /opt/jmeter.tgz
+
+RUN cd /opt && tar zxf jmeter.tgz
