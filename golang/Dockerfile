@@ -6,13 +6,15 @@ MAINTAINER shadow1163 (674602286@qq.com)
 
 RUN apt-get update && apt-get install -y software-properties-common 
 
-RUN add-apt-repository ppa:longsleep/golang-backports
+RUN add-apt-repository -y ppa:gophers/archive
 
 RUN mkdir /go
 
 ENV GOPATH=/go
 
-RUN apt-get update && apt-get install -y golang git vim portaudio19-dev mesa-common-dev xorg-dev libgl-dev openssh-server
+RUN apt-get update && apt-get install -y golang-1.10-go golang-1.10-doc git vim portaudio19-dev mesa-common-dev xorg-dev libgl-dev openssh-server --fix-missing
+
+RUN ln -s /usr/lib/go-1.10/bin/go /usr/bin/go
 
 RUN go get github.com/fogleman/nes
 
