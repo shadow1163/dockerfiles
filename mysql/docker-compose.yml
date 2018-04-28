@@ -1,0 +1,27 @@
+version: '3.3'
+
+services:
+   db:
+     image: mysql:latest
+     volumes:
+             #- ./wp-data:/docker-entrypoint-initdb.d
+       - ./db:/var/lib/mysql
+     restart: always
+     environment:
+       MYSQL_ROOT_PASSWORD: password
+       MYSQL_DATABASE: wordpress
+     ports:
+       - 33306:3306
+     command: [
+        '--default_authentication_plugin=mysql_native_password',
+        '--character-set-server=utf8mb4',
+        '--collation-server=utf8mb4_unicode_ci'
+     ]
+     networks:
+       - mysql-network
+
+networks:
+  mysql-network:
+      driver: bridge
+volumes:
+  datavolume:
