@@ -13,5 +13,6 @@ echo "slapd slapd/password2 password password" | debconf-set-selections
 killall slapd
 sed -i "s/^exit 101$/exit 0/" /usr/sbin/policy-rc.d
 dpkg-reconfigure slapd
-#service slapd restart
+killall slapd
+service slapd restart
 apachectl -DFOREGROUND
