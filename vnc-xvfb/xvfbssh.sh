@@ -3,6 +3,7 @@
 export DISPLAY=:20
 Xvfb :20 -screen 0 1024x768x24 -nolisten tcp &
 x11vnc -storepasswd password /tmp/vncpass 
-x11vnc -rfbport 5920 -rfbauth /tmp/vncpass -display $DISPLAY -forever
+x11vnc -rfbport 5920 -rfbauth /tmp/vncpass -display $DISPLAY -forever &
+startxfce4
 #Xvfb :20 -screen 0 1366x768x16 &
 #x11vnc -passwd TestVNC -display :20 -N -forever
