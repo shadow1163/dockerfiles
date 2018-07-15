@@ -1,0 +1,6 @@
+Started by user [8mha:////4FVzk8et/lv+bp1IPsye+IXN9zOtmdbcxhakKw0/XGxVAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzuEgZu/dLi1CL9xJTczDwA+rnvwMAAAAA=[0mecosystempo
+Building remotely on [8mha:////4Oo02AVwSvsDHdGwVss87oWZcMbbTa7g2ezpwlLnM+1EAAAAqB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyZEgYZ/eT83ILSktQi/ZT85OzUIl0Ty+REE1MLQxMjYwB5WTyu0QAAAA==[0mdocker-49ca4581423 on docker (slave) in workspace /home/jenkins/workspace/demo
+[demo] $ /bin/sh -xe /tmp/jenkins7890755261352987006.sh
++ echo hello world
+hello world
+Finished: SUCCESS

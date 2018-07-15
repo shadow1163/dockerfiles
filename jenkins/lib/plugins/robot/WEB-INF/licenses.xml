@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<l:dependencies xmlns:l='licenses' groupId='org.jenkins-ci.plugins' artifactId='robot' version='1.6.4'><l:dependency name='Robot Framework plugin' groupId='org.jenkins-ci.plugins' artifactId='robot' version='1.6.4' url='http://wiki.jenkins-ci.org/display/JENKINS/Robot+Framework+Plugin'><l:description>Shows Robot Framework test results in project</l:description></l:dependency></l:dependencies>
