@@ -1,0 +1,41 @@
+{
+  "c398165193b396d834e5e030605bc655" : {
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 2,
+      "unknown" : 0,
+      "total" : 3
+    },
+    "items" : [ {
+      "uid" : "3cdcd65ae16b8bcd",
+      "reportUrl" : "http://172.17.0.3:8080/job/allure-test/12/allure/#testresult/3cdcd65ae16b8bcd",
+      "status" : "passed",
+      "time" : {
+        "start" : 1531734165606,
+        "stop" : 1531734165606,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "898be8d8b37ec919",
+      "reportUrl" : "http://172.17.0.3:8080/job/allure-test/5/allure/#testresult/898be8d8b37ec919",
+      "status" : "passed",
+      "time" : {
+        "start" : 1531733339365,
+        "stop" : 1531733339365,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "91c0e9b903e87a93",
+      "reportUrl" : "http://172.17.0.3:8080/job/allure-test/4/allure/#testresult/91c0e9b903e87a93",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 4 == 5\n +  where 4 = inc(3)",
+      "time" : {
+        "start" : 1531733224483,
+        "stop" : 1531733224486,
+        "duration" : 3
+      }
+    } ]
+  }
+}

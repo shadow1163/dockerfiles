@@ -55,5 +55,105 @@
       <nodeName>docker-4324b1cbac3</nodeName>
       <timestamp0>1531622709793</timestamp0>
     </com.cloudbees.plugins.credentials.fingerprints.NodeCredentialsFingerprintFacet>
+    <com.cloudbees.plugins.credentials.fingerprints.NodeCredentialsFingerprintFacet plugin="credentials@2.1.17">
+      <timestamp>1531723871468</timestamp>
+      <nodeName>docker-eff7138de14</nodeName>
+      <timestamp0>1531723871468</timestamp0>
+    </com.cloudbees.plugins.credentials.fingerprints.NodeCredentialsFingerprintFacet>
+    <com.cloudbees.plugins.credentials.fingerprints.NodeCredentialsFingerprintFacet plugin="credentials@2.1.17">
+      <timestamp>1531723939995</timestamp>
+      <nodeName>docker-f0f7fe1bf11</nodeName>
+      <timestamp0>1531723939995</timestamp0>
+    </com.cloudbees.plugins.credentials.fingerprints.NodeCredentialsFingerprintFacet>
+    <com.cloudbees.plugins.credentials.fingerprints.NodeCredentialsFingerprintFacet plugin="credentials@2.1.17">
+      <timestamp>1531724089316</timestamp>
+      <nodeName>docker-f32472207f3</nodeName>
+      <timestamp0>1531724089316</timestamp0>
+    </com.cloudbees.plugins.credentials.fingerprints.NodeCredentialsFingerprintFacet>
+    <com.cloudbees.plugins.credentials.fingerprints.NodeCredentialsFingerprintFacet plugin="credentials@2.1.17">
+      <timestamp>1531725746535</timestamp>
+      <nodeName>docker-10b41ce205f5</nodeName>
+      <timestamp0>1531725746535</timestamp0>
+    </com.cloudbees.plugins.credentials.fingerprints.NodeCredentialsFingerprintFacet>
+    <com.cloudbees.plugins.credentials.fingerprints.NodeCredentialsFingerprintFacet plugin="credentials@2.1.17">
+      <timestamp>1531727734047</timestamp>
+      <nodeName>docker-1282cca4c394</nodeName>
+      <timestamp0>1531727734047</timestamp0>
+    </com.cloudbees.plugins.credentials.fingerprints.NodeCredentialsFingerprintFacet>
+    <com.cloudbees.plugins.credentials.fingerprints.NodeCredentialsFingerprintFacet plugin="credentials@2.1.17">
+      <timestamp>1531730378754</timestamp>
+      <nodeName>docker-14ea930e8947</nodeName>
+      <timestamp0>1531730378754</timestamp0>
+    </com.cloudbees.plugins.credentials.fingerprints.NodeCredentialsFingerprintFacet>
+    <com.cloudbees.plugins.credentials.fingerprints.NodeCredentialsFingerprintFacet plugin="credentials@2.1.17">
+      <timestamp>1531731026861</timestamp>
+      <nodeName>docker-158183895e87</nodeName>
+      <timestamp0>1531731026861</timestamp0>
+    </com.cloudbees.plugins.credentials.fingerprints.NodeCredentialsFingerprintFacet>
+    <com.cloudbees.plugins.credentials.fingerprints.NodeCredentialsFingerprintFacet plugin="credentials@2.1.17">
+      <timestamp>1531731322921</timestamp>
+      <nodeName>docker-15c66cf19675</nodeName>
+      <timestamp0>1531731322921</timestamp0>
+    </com.cloudbees.plugins.credentials.fingerprints.NodeCredentialsFingerprintFacet>
+    <com.cloudbees.plugins.credentials.fingerprints.NodeCredentialsFingerprintFacet plugin="credentials@2.1.17">
+      <timestamp>1531731929819</timestamp>
+      <nodeName>docker-1653c533b0f1</nodeName>
+      <timestamp0>1531731929819</timestamp0>
+    </com.cloudbees.plugins.credentials.fingerprints.NodeCredentialsFingerprintFacet>
+    <com.cloudbees.plugins.credentials.fingerprints.NodeCredentialsFingerprintFacet plugin="credentials@2.1.17">
+      <timestamp>1531732763170</timestamp>
+      <nodeName>docker-1715cd8fc28e</nodeName>
+      <timestamp0>1531732763170</timestamp0>
+    </com.cloudbees.plugins.credentials.fingerprints.NodeCredentialsFingerprintFacet>
+    <com.cloudbees.plugins.credentials.fingerprints.NodeCredentialsFingerprintFacet plugin="credentials@2.1.17">
+      <timestamp>1531734231876</timestamp>
+      <nodeName>docker-186bbfd69a96</nodeName>
+      <timestamp0>1531734231876</timestamp0>
+    </com.cloudbees.plugins.credentials.fingerprints.NodeCredentialsFingerprintFacet>
+    <com.cloudbees.plugins.credentials.fingerprints.NodeCredentialsFingerprintFacet plugin="credentials@2.1.17">
+      <timestamp>1531734729058</timestamp>
+      <nodeName>docker-18df8375eaf6</nodeName>
+      <timestamp0>1531734729058</timestamp0>
+    </com.cloudbees.plugins.credentials.fingerprints.NodeCredentialsFingerprintFacet>
+    <com.cloudbees.plugins.credentials.fingerprints.NodeCredentialsFingerprintFacet plugin="credentials@2.1.17">
+      <timestamp>1531735182087</timestamp>
+      <nodeName>docker-1948f8b6a9ee</nodeName>
+      <timestamp0>1531735182087</timestamp0>
+    </com.cloudbees.plugins.credentials.fingerprints.NodeCredentialsFingerprintFacet>
+    <com.cloudbees.plugins.credentials.fingerprints.NodeCredentialsFingerprintFacet plugin="credentials@2.1.17">
+      <timestamp>1531735290258</timestamp>
+      <nodeName>docker-19621f0702d2</nodeName>
+      <timestamp0>1531735290258</timestamp0>
+    </com.cloudbees.plugins.credentials.fingerprints.NodeCredentialsFingerprintFacet>
+    <com.cloudbees.plugins.credentials.fingerprints.NodeCredentialsFingerprintFacet plugin="credentials@2.1.17">
+      <timestamp>1531735425125</timestamp>
+      <nodeName>docker-19819608d592</nodeName>
+      <timestamp0>1531735425125</timestamp0>
+    </com.cloudbees.plugins.credentials.fingerprints.NodeCredentialsFingerprintFacet>
+    <com.cloudbees.plugins.credentials.fingerprints.NodeCredentialsFingerprintFacet plugin="credentials@2.1.17">
+      <timestamp>1531735678077</timestamp>
+      <nodeName>docker-19bc75c7237e</nodeName>
+      <timestamp0>1531735678077</timestamp0>
+    </com.cloudbees.plugins.credentials.fingerprints.NodeCredentialsFingerprintFacet>
+    <com.cloudbees.plugins.credentials.fingerprints.NodeCredentialsFingerprintFacet plugin="credentials@2.1.17">
+      <timestamp>1531736177581</timestamp>
+      <nodeName>docker-1a30c3ec4c79</nodeName>
+      <timestamp0>1531736177581</timestamp0>
+    </com.cloudbees.plugins.credentials.fingerprints.NodeCredentialsFingerprintFacet>
+    <com.cloudbees.plugins.credentials.fingerprints.NodeCredentialsFingerprintFacet plugin="credentials@2.1.17">
+      <timestamp>1531736462853</timestamp>
+      <nodeName>docker-1a73328d7a84</nodeName>
+      <timestamp0>1531736462853</timestamp0>
+    </com.cloudbees.plugins.credentials.fingerprints.NodeCredentialsFingerprintFacet>
+    <com.cloudbees.plugins.credentials.fingerprints.NodeCredentialsFingerprintFacet plugin="credentials@2.1.17">
+      <timestamp>1531736686814</timestamp>
+      <nodeName>docker-1aa755f4595b</nodeName>
+      <timestamp0>1531736686814</timestamp0>
+    </com.cloudbees.plugins.credentials.fingerprints.NodeCredentialsFingerprintFacet>
+    <com.cloudbees.plugins.credentials.fingerprints.NodeCredentialsFingerprintFacet plugin="credentials@2.1.17">
+      <timestamp>1531736796529</timestamp>
+      <nodeName>docker-1ac0e3843fc9</nodeName>
+      <timestamp0>1531736796529</timestamp0>
+    </com.cloudbees.plugins.credentials.fingerprints.NodeCredentialsFingerprintFacet>
   </facets>
 </fingerprint>

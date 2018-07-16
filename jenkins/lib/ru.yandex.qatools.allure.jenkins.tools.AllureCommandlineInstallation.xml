@@ -1,0 +1,10 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<ru.yandex.qatools.allure.jenkins.tools.AllureCommandlineInstallation_-DescriptorImpl plugin="allure-jenkins-plugin@2.26.0">
+  <installations class="ru.yandex.qatools.allure.jenkins.tools.AllureCommandlineInstallation-array">
+    <ru.yandex.qatools.allure.jenkins.tools.AllureCommandlineInstallation>
+      <name>allure</name>
+      <home>/usr/local</home>
+      <properties/>
+    </ru.yandex.qatools.allure.jenkins.tools.AllureCommandlineInstallation>
+  </installations>
+</ru.yandex.qatools.allure.jenkins.tools.AllureCommandlineInstallation_-DescriptorImpl>

@@ -1,0 +1,158 @@
+{
+  "uid" : "15c5a21cb7dcbfc5",
+  "name" : "test_answer",
+  "fullName" : "test_sample#test_answer",
+  "historyId" : "c398165193b396d834e5e030605bc655",
+  "time" : {
+    "start" : 1531736187496,
+    "stop" : 1531736187496,
+    "duration" : 0
+  },
+  "status" : "passed",
+  "flaky" : true,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "host",
+    "value" : "4d2532c89c27"
+  }, {
+    "name" : "thread",
+    "value" : "1346-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_sample"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "d49570050c7bdf01",
+      "status" : "passed",
+      "time" : {
+        "start" : 1531734165606,
+        "stop" : 1531734165606,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "353b189e731eaef9",
+      "status" : "passed",
+      "time" : {
+        "start" : 1531734034978,
+        "stop" : 1531734034978,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "bac87b094b5fbaeb",
+      "status" : "passed",
+      "time" : {
+        "start" : 1531733952506,
+        "stop" : 1531733952506,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "54cb76c406fefc4c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1531733769536,
+        "stop" : 1531733769536,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "c9e434cd6373ac8c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1531733718033,
+        "stop" : 1531733718033,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "7e9c993647f60b3b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1531733598137,
+        "stop" : 1531733598137,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "12dc30467fb6fce3",
+      "status" : "passed",
+      "time" : {
+        "start" : 1531733428558,
+        "stop" : 1531733428558,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "f1272da6f0db6970",
+      "status" : "passed",
+      "time" : {
+        "start" : 1531733339365,
+        "stop" : 1531733339365,
+        "duration" : 0
+      }
+    }, {
+      "uid" : "c33b2b6a0edacfb8",
+      "status" : "failed",
+      "statusDetails" : "AssertionError: assert 4 == 5\n +  where 4 = inc(3)",
+      "time" : {
+        "start" : 1531733224483,
+        "stop" : 1531733224486,
+        "duration" : 3
+      }
+    } ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 1,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 3,
+        "unknown" : 0,
+        "total" : 4
+      },
+      "items" : [ {
+        "uid" : "3cdcd65ae16b8bcd",
+        "reportUrl" : "http://172.17.0.3:8080/job/allure-test/12/allure/#testresult/3cdcd65ae16b8bcd",
+        "status" : "passed",
+        "time" : {
+          "start" : 1531734165606,
+          "stop" : 1531734165606,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "898be8d8b37ec919",
+        "reportUrl" : "http://172.17.0.3:8080/job/allure-test/5/allure/#testresult/898be8d8b37ec919",
+        "status" : "passed",
+        "time" : {
+          "start" : 1531733339365,
+          "stop" : 1531733339365,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "91c0e9b903e87a93",
+        "reportUrl" : "http://172.17.0.3:8080/job/allure-test/4/allure/#testresult/91c0e9b903e87a93",
+        "status" : "failed",
+        "statusDetails" : "AssertionError: assert 4 == 5\n +  where 4 = inc(3)",
+        "time" : {
+          "start" : 1531733224483,
+          "stop" : 1531733224486,
+          "duration" : 3
+        }
+      } ]
+    },
+    "tags" : [ ]
+  },
+  "source" : "15c5a21cb7dcbfc5.json",
+  "parameterValues" : [ ]
+}
