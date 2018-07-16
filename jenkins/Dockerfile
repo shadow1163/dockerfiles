@@ -13,4 +13,8 @@ RUN pip3 install allure-pytest
 
 RUN mkdir -p /var/run/jenkins/ && touch /var/run/jenkins/jenkins.pid
 
+ADD jenkins /etc/default
+
+EXPOSE 8080 50000
+
 CMD service jenkins restart; tail -f /var/log/jenkins/jenkins.log

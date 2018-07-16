@@ -14,6 +14,9 @@ RUN pip3 install -r /tmp/requirements.txt
 RUN wget -q "https://github.com/mozilla/geckodriver/releases/download/v0.19.1/geckodriver-v0.19.1-linux64.tar.gz" -O /tmp/geckodriver.tgz \
     && tar zxf /tmp/geckodriver.tgz -C /usr/bin/ \
     && rm /tmp/geckodriver.tgz
+# allure 2.6
+RUN wget https://dl.bintray.com/qameta/generic/io/qameta/allure/allure/2.6.0/allure-2.6.0.tgz -O /tmp/allure.tgz -o /dev/null && tar xf /tmp/allure.tgz -C /tmp/ && cp -r /tmp/allure-2.6.0/* /usr/local/ && rm -rf /tmp/allure*
+# user
 USER jenkins
 WORKDIR /home/jenkins
 RUN mkdir /home/jenkins/data
