@@ -1,3 +1,5 @@
 robotframework
 robotframework-seleniumlibrary
 robotframework-xvfb
+robotframework-appiumlibrary
+allure-robotframework

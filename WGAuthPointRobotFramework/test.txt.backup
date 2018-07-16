@@ -1,6 +1,14 @@
 *** Settings ***
 Documentation     This is a demo for AuthPoint & RobotFramework
 Library           SeleniumLibrary
+Library           AppiumLibrary
+
+*** Variables ***
+${REMOTE_URL}     http://10.138.38.149:4723/wd/hub
+${PLATFORM_NAME}    Android
+${PLATFORM_VERSION}    8.1.0
+${DEVICE_NAME}    Android Emulator
+${APP}            C:/AuthPoint.apk
 
 *** Test Cases ***
 Staging-Login
@@ -15,3 +23,11 @@ Staging-Login
     SeleniumLibrary.Click Element    id=submitButton
     SeleniumLibrary.Wait Until Element Is Visible    xpath=//h1[text() = 'Welcome to WatchGuard Cloud!']    timeout=30
     [Teardown]    Close Browser
+
+Android-Demo
+    [Documentation]    There is a demo with android device
+    [Tags]    App
+    Open Application    ${REMOTE_URL}    platformName=${PLATFORM_NAME}    platformVersion=${PLATFORM_VERSION}    deviceName=${DEVICE_NAME}    app=${APP}    automationName=appium
+    ...    appPackage=com.watchguard.authpoint    appActivity=com.watchguard.authpoint.view.activity.SplashActivity
+    Sleep    10
+    Quit Application
