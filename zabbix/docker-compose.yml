@@ -1,0 +1,53 @@
+version: '2'
+services:
+  mysql-db:
+    image: mysql:5.7
+    container_name: mysql-server
+    volumes:
+      - zabbix-db-storage:/var/lib/mysql
+    environment:
+      - MYSQL_DATABASE="zabbix"
+      - MYSQL_USER="zabbix"
+      - MYSQL_PASSWORD="zabbix"
+      - MYSQL_ROOT_PASSWORD="password"
+  zabbix-gateway:
+    image: zabbix/zabbix-java-gateway:latest
+    container_name: zabbix-java-gateway
+  zabbix-server:
+    image: zabbix/zabbix-server-mysql:latest
+    container_name: zabbix-server-mysql
+    depends_on:
+      - mysql-db
+      - zabbix-gateway
+    ports:
+      - "10051:10051"
+    links:
+      - mysql-db:mysql
+      - zabbix-gateway:zabbix-gateway
+    environment:
+      - DB_SERVER_HOST=mysql-server
+      - MYSQL_DATABASE="zabbix"
+      - MYSQL_USER="zabbix"
+      - MYSQL_PASSWORD="zabbix"
+      - MYSQL_ROOT_PASSWORD="password"
+      - ZBX_JAVAGATEWAY="zabbix-java-gateway"
+  zabbix-web-apache-mysql:
+    image: zabbix/zabbix-web-apache-mysql:latest
+    container_name: zabbix-web-apache-mysql
+    depends_on:
+      - mysql-db
+      - zabbix-server
+    ports:
+      - "80:80"
+    links:
+      - mysql-db:mysql
+      - zabbix-server:zabbix-server
+    environment:
+      - DB_SERVER_HOST=mysql-server
+      - MYSQL_DATABASE="zabbix"
+      - MYSQL_USER="zabbix"
+      - MYSQL_PASSWORD="zabbix"
+      - MYSQL_ROOT_PASSWORD="password"
+volumes:
+  zabbix-db-storage:
+    driver: local
