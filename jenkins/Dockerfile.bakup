@@ -1,0 +1,17 @@
+FROM ubuntu:18.04
+
+MAINTAINER shadow1163 (674602286@qq.com)
+
+RUN apt-get update && apt-get install -y --fix-missing python3 software-properties-common wget python3-pip openjdk-8-jre openjdk-8-jre-headless curl
+
+#RUN apt-add-repository -y ppa:qameta/allure && apt-get update && apt-get install -y allure apt-transport-https
+RUN curl -o allure-2.6.0.tgz -Ls https://dl.bintray.com/qameta/generic/io/qameta/allure/allure/2.6.0/allure-2.6.0.tgz && tar -zxvf allure-2.6.0.tgz -C /opt/ && ln -s /opt/allure-2.6.0/bin/allure /usr/bin/allure && allure --version
+
+RUN wget -q -O - https://pkg.jenkins.io/debian/jenkins-ci.org.key | apt-key add - && echo deb https://pkg.jenkins.io/debian-stable binary/ | tee /etc/apt/sources.list.d/jenkins.list && apt-get update && apt-get install -y jenkins && mkdir -p /var/run/jenkins/ && touch /var/run/jenkins/jenkins.pid
+
+RUN pip3 install allure-pytest
+
+ENV JENKINS_OPTS="--handlerCountMax=300 --logfile=/var/log/jenkins/jenkins.log --webroot=/var/cache/jenkins/war"
+EXPOSE 8080 50000
+
+CMD /etc/init.d/jenkins restart; tail -f /var/log/jenkins/jenkins.log
