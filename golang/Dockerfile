@@ -31,5 +31,8 @@ RUN echo "export GOPATH=/go" >> /etc/profile
 RUN echo "export GOBIN=/go/bin" >> /etc/profile
 RUN echo "export PATH=$PATH:$GOBIN" >> /etc/profile
 
+#java
+RUN apt-get update && apt-get install -y default-jre
+
 EXPOSE 22
 CMD ["/usr/sbin/sshd","-D"]
