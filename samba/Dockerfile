@@ -6,7 +6,7 @@ MAINTAINER shadow1163 (674602286@qq.com)
 
 RUN apt-get update && apt-get install -y samba samba-common python-glade2 system-config-samba
 
-RUN useradd junbo && addgroup smbgroup && usermod -aG smbgroup junbo && (echo "password"; echo "password" )| smbpasswd -a junbo
+RUN useradd junbo && addgroup smbgroup && usermod -aG smbgroup junbo && (echo "welcome"; echo "welcome" )| smbpasswd -a junbo
 
 RUN mkdir /Downloads && chown -R root:smbgroup /Downloads && chmod -R 0775 /Downloads
 
