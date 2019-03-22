@@ -1,1 +1,1 @@
-docker run -p 88:80 --name mynginx -v /home/junbo/old-disk/home/junbo/Downloads:/usr/share/nginx/html/ -v $PWD/conf/nginx.conf:/etc/nginx/nginx.conf -d nginx
+docker run --name mynginx --restart always -v $PWD/Downloads:/usr/share/nginx/html/ -v $PWD/conf/nginx.conf:/etc/nginx/nginx.conf -d nginx

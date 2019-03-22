@@ -15,4 +15,5 @@ sed -i "s/^exit 101$/exit 0/" /usr/sbin/policy-rc.d
 dpkg-reconfigure slapd
 killall slapd
 service slapd restart
+ldapadd -x -D "cn=admin,dc=example,dc=com" -w password -H ldap:// -f /user.ldif
 apachectl -DFOREGROUND
