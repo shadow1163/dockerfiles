@@ -1,0 +1,36 @@
+version: '3'
+services:
+  mail:
+    image: tvial/docker-mailserver:latest
+    hostname: ${HOSTNAME}
+    domainname: ${DOMAINNAME}
+    container_name: ${CONTAINER_NAME}
+    ports:
+    - "25:25"
+    - "143:143"
+    - "587:587"
+    - "993:993"
+    volumes:
+    - /home/junbo/data/mailserver/maildata:/var/mail
+    - /home/junbo/data/mailserver/mailstate:/var/mail-state
+    - /home/junbo/data/mailserver/maillogs:/var/log/mail
+    - ./config/:/tmp/docker-mailserver/
+    env_file:
+    - .env
+    - env-mailserver
+    cap_add:
+    - NET_ADMIN
+    - SYS_PTRACE
+    restart: always
+  rainloop:
+    image: hardware/rainloop
+    hostname: rainloop
+    domainname: ${DOMAINNAME}
+    container_name: rainloop
+    volumes:
+      - /home/junbo/data/mailserver/rainloop:/rainloop/data
+    depends_on:
+      - mail
+    restart: always
+    ports:
+    - "8888:8888"
