@@ -7,9 +7,12 @@ services:
     container_name: ${CONTAINER_NAME}
     ports:
     - "25:25"
+    - "110:110"
     - "143:143"
+    - "465:465"
     - "587:587"
     - "993:993"
+    - "995:995"
     volumes:
     - /home/junbo/data/mailserver/maildata:/var/mail
     - /home/junbo/data/mailserver/mailstate:/var/mail-state

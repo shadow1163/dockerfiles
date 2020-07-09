@@ -1,0 +1,24 @@
+version: '2'
+services:
+  mail:
+    image: tvial/docker-mailserver:latest
+    hostname: ${HOSTNAME}
+    domainname: ${DOMAINNAME}
+    container_name: ${CONTAINER_NAME}
+    ports:
+    - "465:465"
+    - "587:587"
+    - "993:993"
+    - "995:995"
+    volumes:
+    - $HOME/data/mailssl/maildata:/var/mail
+    - $HOME/data/mailssl/mailstate:/var/mail-state
+    - $HOME/data/mailssl/maillogs:/var/log/mail
+    - $HOME/data/mailssl/config/:/tmp/docker-mailserver/
+    env_file:
+    - .env
+    - env-mailserver
+    cap_add:
+    - NET_ADMIN
+    - SYS_PTRACE
+    restart: always

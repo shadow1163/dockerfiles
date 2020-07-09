@@ -1,0 +1,14 @@
+version: "2"
+
+services:
+  apache:
+    image: httpd:latest
+    container_name: apache
+    environment:
+      - USER_UID=1000
+      - USER_GID=1000
+    restart: always
+    volumes:
+      - $HOME/Downloads:/usr/local/apache2/htdocs
+    ports:
+      - "8880:80"

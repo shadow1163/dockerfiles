@@ -1,0 +1,18 @@
+version: "2"
+
+services:
+  ftp:
+    image: ftp:latest
+    build: .
+    container_name: ftp
+    environment:
+      - USER_UID=1000
+      - USER_GID=1000
+    restart: always
+    volumes:
+      - $HOME/Downloads:/ftp/Downloads
+      - /tmp:/ftp/Upload
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
+    ports:
+      - "21:21"
