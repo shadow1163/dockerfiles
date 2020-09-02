@@ -1,0 +1,14 @@
+compatibility_level=2
+myhostname = mail.junbo.wg
+mydomain = junbo.wg
+myorigin = $mydomain
+inet_interfaces = all
+inet_protocols = ipv4
+
+############################CYRUS-SASL############################
+smtpd_sasl_path = smtpd
+broken_sasl_auth_clients = yes
+#smtpd_recipient_restrictions=permit_mynetworks,permit_sasl_authenticated,reject_invalid_hostname,reject_non_fqdn_hostname,reject_unknown_sender_domain,reject_non_fqdn_sender,reject_non_fqdn_recipient,reject_unknown_recipient_domain,reject_unauth_pipelining,reject_unauth_destination
+smtpd_sasl_auth_enable = yes
+smtpd_sasl_local_domain = $myhostname
+smtpd_sasl_security_options = noanonymous

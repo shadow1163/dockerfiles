@@ -16,3 +16,4 @@ services:
       - /etc/localtime:/etc/localtime:ro
     ports:
       - "21:21"
+      - "11100-11110:11100-11110"
