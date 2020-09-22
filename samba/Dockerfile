@@ -1,15 +1,24 @@
-FROM ubuntu:18.04
+FROM alpine:latest
+LABEL maintaner="shadow1163 - https://github.com/shadow1163/"
 
-MAINTAINER shadow1163 (674602286@qq.com)
+RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories && \
+	apk update && \
+	apk upgrade && \
+	apk add --no-cache samba samba-common-tools supervisor&& \
+	(rm /tmp/* 2>/dev/null || true) && (rm -rf /var/cache/apk/* 2>/dev/null || true)
 
-#COPY sources.list /etc/apt/sources.list
+# create a dir for the config and the share
+RUN mkdir /config /shared
 
-RUN apt-get update && apt-get install -y samba samba-common python-glade2 system-config-samba
+# copy config files from project folder to get a default config going for samba and supervisord
+COPY *.conf /config/
 
-RUN useradd junbo && addgroup smbgroup && usermod -aG smbgroup junbo && (echo "welcome"; echo "welcome" )| smbpasswd -a junbo
+RUN addgroup smbgroup && adduser -D -H -G smbgroup -s /bin/false -u 1000 junbo
 
-RUN mkdir /Downloads && chown -R root:smbgroup /Downloads && chmod -R 0775 /Downloads
+RUN echo -e "password\npassword" | smbpasswd -a -s -c /config/smb.conf junbo
 
-ADD smb.conf /etc/samba/
+# exposes samba's default ports (135 for End Point Mapper [DCE/RPC Locator Service],
+# 137, 138 for nmbd and 139, 445 for smbd)
+EXPOSE 135/tcp 137/udp 138/udp 139/tcp 445/tcp
 
-CMD service smbd restart; tail -f /var/log/samba/log.smbd
+ENTRYPOINT ["supervisord", "-c", "/config/supervisord.conf"]
