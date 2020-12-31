@@ -1,0 +1,11 @@
+version: "2"
+
+services:
+  ftp:
+    image: liteos:latest
+    build: .
+    container_name: liteosComplier
+    environment:
+      - USER_UID=1000
+      - USER_GID=1000
+    restart: always
